@@ -32,22 +32,26 @@ namespace Triangle_Rimitsen
             listView1.Items.Add("Периметр");
             listView1.Items.Add("Площадь");
             listView1.Items.Add("Высота");
+            listView1.Items.Add("Средняя линия");
+            listView1.Items.Add("Угол a");
             listView1.Items.Add("Существует?");
-            listView1.Items.Add("Спецификатор"); 
+            listView1.Items.Add("Спецификатор");
             listView1.Items[0].SubItems.Add(triangle.outputA());
             listView1.Items[1].SubItems.Add(triangle.outputB());
             listView1.Items[2].SubItems.Add(triangle.outputC());
             listView1.Items[3].SubItems.Add(Convert.ToString(triangle.Perimeter()));
             listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Surface()));
             listView1.Items[5].SubItems.Add(Convert.ToString(triangle.Vesota()));
-            if (triangle.ExistTriange) { listView1.Items[6].SubItems.Add("Существует"); }
-            else listView1.Items[6].SubItems.Add("Не существует");
-            listView1.Items[7].SubItems.Add(triangle.TriangleType);
-            if(triangle.TriangleType=="Это равносторонний")
+            listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Sredanjalinija()));
+            listView1.Items[7].SubItems.Add(Convert.ToString(triangle.Ugol()) + "°");
+            if (triangle.ExistTriange) { listView1.Items[8].SubItems.Add("Существует"); }
+            else listView1.Items[8].SubItems.Add("Не существует");
+            listView1.Items[9].SubItems.Add(triangle.TriangleType);
+            if (triangle.TriangleType == "Это равносторонний")
             {
                 pictureBox1.Image = Properties.Resources.ravnosto;
             }
-            else if(triangle.TriangleType == "Это равнобедренный")
+            else if (triangle.TriangleType == "Это равнобедренный")
             {
                 pictureBox1.Image = Properties.Resources.ravno;
             }
@@ -59,15 +63,6 @@ namespace Triangle_Rimitsen
             {
                 pictureBox1.Image = Properties.Resources.lomanaya;
             }
-
-
-
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -97,6 +92,42 @@ namespace Triangle_Rimitsen
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Variant1_CheckedChanged(object sender, EventArgs e)
+        {
+            txtA.Visible = false;
+            txtB.Visible = false;
+            txtC.Visible = false;
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            txtA.Visible = true;
+            txtB.Visible = true;
+            txtC.Visible = true;
+        }
+
+        private void Variants1_Click(object sender, EventArgs e)
+        {
+            txtA.Visible = false;
+            txtB.Visible = false;
+            txtC.Visible = false;
+            txtA.Visible = false;
+            txtB.Visible = false;
+            txtC.Visible = false;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            txtA.Visible = true;
+            txtB.Visible = true;
+            txtC.Visible = true;
+        }
+
+        private void Run_button_Click2(object sender, EventArgs e)
         {
 
         }

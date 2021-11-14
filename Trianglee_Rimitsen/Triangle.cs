@@ -10,8 +10,8 @@ namespace Triangle_Rimitsen
         public double b;// вторая сторона
         public double c;// третья сторона
         public double h;// высота
-        public double alphaugol;//угол альфа
-        public double o;
+        public double cosa;//угол а
+        public double z;//средняя линия
 
         public Triangle(double A, double B, double C)// Конструктор
         {
@@ -29,11 +29,11 @@ namespace Triangle_Rimitsen
             a = A;
             h = H;
         }
-        public Triangle(double A, double O)
+        public Triangle(double Z)
         {
-            a = A;
-            o = O;
+            z = Z;
         }
+
         public string outputA()
         {
             return Convert.ToString(a);
@@ -81,11 +81,18 @@ namespace Triangle_Rimitsen
             return ha;
         }
         
-        public double credanjalinija()
+        public double Sredanjalinija()
         {
-            double o = 0;
-            o = a / 2;
-            return o;
+            double z = 0;
+            z = a / 2;
+            return z;
+        }
+
+        public double Ugol()
+        {
+            double cosa = 0;
+            cosa = Math.Cos(((c * c) + (b * b) - (a * a)) / 2 * b * c);
+            return cosa;
         }
         public double GetSetA
         {
