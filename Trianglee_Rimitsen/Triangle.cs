@@ -13,7 +13,7 @@ namespace Triangle_Rimitsen
         public double cosa;//угол а
         public double z;//средняя линия
 
-        public Triangle(double A, double B, double C)// Конструктор
+        public Triangle(double A, double B, double C)// Конструктор для переменных a, b, c
         {
             a = A;// создаем с заданными длинами сторон согласно заданию
             b = B;
@@ -24,12 +24,12 @@ namespace Triangle_Rimitsen
         {
 
         }
-        public Triangle(double A, double H)
+        public Triangle(double A, double H)//Конструктор для переменных a, b
         {
             a = A;
             h = H;
         }
-        public Triangle(double Z)
+        public Triangle(double Z)//Конструктор для переменной средной линии
         {
             z = Z;
         }
@@ -46,13 +46,13 @@ namespace Triangle_Rimitsen
         {
             return Convert.ToString(c);
         }
-        public double Perimeter()
+        public double Perimeter()//Функция для поиска периметра
         {
             double p = 0;
             p = a + b + c;
             return p;
         }
-        public double Surface()
+        public double Surface()//Функция для поиска площади
         {
             double s = 0;
             double p = 0;
@@ -69,7 +69,7 @@ namespace Triangle_Rimitsen
 
         }
 
-        public double Vesota()
+        public double Vesota()//Функция для поиска высоты
         {
             double ha = 0;
             double s = 0;
@@ -81,14 +81,14 @@ namespace Triangle_Rimitsen
             return ha;
         }
         
-        public double Sredanjalinija()
+        public double Sredanjalinija()//Функция для поиска средной линии
         {
             double z = 0;
             z = a / 2;
             return z;
         }
 
-        public double Ugol()
+        public double Ugol()//Функция для поиска угла
         {
             double cosa = 0;
             cosa = Math.Cos(((c * c) + (b * b) - (a * a)) / 2 * b * c);
@@ -128,7 +128,7 @@ namespace Triangle_Rimitsen
             }
         }
 
-        public string TriangleType
+        public string TriangleType//Функция, которая определяет вид треугольника, либо он ломаный, равносторонний, равнобедренный или разносторонний 
         {
             get
             {

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nikit\\Source\\Repos\\Triangle\\Trianglee_Rimitsen\\Triangle_Rimitsen.csproj",
+      "projectUniqueName": "C:\\Users\\nikit\\Source\\Repos\\Triangles\\Trianglee_Rimitsen\\Triangle_Rimitsen.csproj",
       "projectName": "Triangle_Rimitsen",
-      "projectPath": "C:\\Users\\nikit\\Source\\Repos\\Triangle\\Trianglee_Rimitsen\\Triangle_Rimitsen.csproj",
+      "projectPath": "C:\\Users\\nikit\\Source\\Repos\\Triangles\\Trianglee_Rimitsen\\Triangle_Rimitsen.csproj",
       "packagesPath": "C:\\Users\\nikit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nikit\\Source\\Repos\\Triangle\\Trianglee_Rimitsen\\obj\\",
+      "outputPath": "C:\\Users\\nikit\\Source\\Repos\\Triangles\\Trianglee_Rimitsen\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nikit\\AppData\\Roaming\\NuGet\\NuGet.Config",
